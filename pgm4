@@ -1,0 +1,70 @@
+NAME:SABARINATH.M
+CLASS:S4R
+ROLL.NO:51
+*********************************************
+  shell script to display various system 
+  configuration
+
+
+#!/bin/bash
+echo "currently logged user and his login name:$USER$LOGNAME"
+echo -e
+echo "============================================================"
+echo "current shell is:$SHELL"
+echo -e
+echo "============================================================"
+echo "home directory:$HOME"
+echo -e
+echo "============================================================"
+echo "ostype:"
+lsb_release -a
+echo -e
+echo "============================================================"
+echo "current path is:$PATH"
+echo -e
+echo "============================================================"
+echo "current working directory:"
+pwd
+echo -e
+echo "============================================================"
+echo "no of users currently logged in is :"
+log=`who|wc -l`
+ echo "There are $log user loged in rite now" 
+echo -e
+echo "============================================================"
+
+
+
+hwlab20@hwlab20:~/sabarinath$ chmod ugo+x file1.sh
+hwlab20@hwlab20:~/sabarinath$ ./file1.sh
+currently logged user and his login name:hwlab20hwlab20
+
+============================================================
+current shell is:/bin/bash
+
+============================================================
+home directory:/home/hwlab20
+
+============================================================
+ostype:
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.10
+Release:	16.10
+Codename:	yakkety
+
+============================================================
+current path is:/home/hwlab20/bin:/home/hwlab20/.local/bin:/usr/local/
+sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/
+games:/snap/bin
+
+============================================================
+current working directory:
+/home/hwlab20/sabarinath
+
+============================================================
+no of users currently logged in is :
+There are 1 user loged in rite now
+
+============================================================
+

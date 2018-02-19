@@ -1,0 +1,56 @@
+SABARINATH.M
+CLASS:S4R
+ROLL.NO 51
+======================================================================
+AIM:. Write a script called addnames that is to be called as follows
+./addnames ulist username
+Here ulist is the name of the file that contains list of user names
+ and username is a
+particular student's username. The script should
+ check that the correct number of arguments was received and print 
+a message, in case the
+number of arguments is incorrect
+ check whether the ulist file exists and print an error message if it 
+does not
+ check whether the username already exists in the file.
+ If the username exists, print a
+message stating that the name already exists. 
+Otherwise, add the username to the end of the list.
+======================================================================
+
+#!/bin/bash
+if [ $# != 2 ];
+then
+echo "argument passing error...requires 2 arguments"
+exit
+fi
+if [ -e $1 ];
+then
+file_name=$1
+user_name=$2
+if grep -q $user_name $file_name;
+then
+echo "the given username is already exist in the file"
+exit
+else
+echo $user_name>>$file_name
+echo "username is successfully added"
+exit
+fi
+else
+echo "the given file name doesn't exist.."
+exit
+fi
+======================================================================
+
+
+
+hwlab20@hwlab20:~/sabarinath$ chmod ugo+x file3.sh
+hwlab20@hwlab20:~/sabarinath$ ./file3.sh user password
+username is successfully added
+hwlab20@hwlab20:~/sabarinath$ ./file3.sh user password
+the given username is already exist in the file
+hwlab20@hwlab20:~/sabarinath$ ./file3.sh user
+argument passing error...requires 2 arguments
+hwlab20@hwlab20:~/sabarinath$ 
+
