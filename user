@@ -1,2 +1,88 @@
-password
-msn
+NAME  :  Sabarinath.M
+CLASS  :  S4R
+ROLL NO : 51
+
+BASIC LINUX COMMANDS FOR DIRECTORY OPERATIONS,DISPLAYING DIRECTORY,STRUCTURE IN TREE FORMAT etc..
+
+
+
+1.Create a directory
+hwlab5@hwlab5:~$ mkdir newfolder
+
+2.Remove a directory
+hwlab5@hwlab5:~$ rmdir test
+
+3.List the directory
+hwlab5@hwlab5:~$ ls
+8086       Downloads         libgraph-1.0.2         newfolder  Sreerenjini
+Arjun      examples.desktop  libgraph-1.0.2.tar.gz  Pictures   Templates
+Desktop    first.sh          minnu                  Public     test
+Documents  JoelJS2R          Music                  rahulc     Videos
+
+4.List the hidden directory
+hwlab5@hwlab5:~$ ls -a
+.              examples.desktop       .profile
+..             first.sh               Public
+8086           .gconf                 rahulc
+Arjun          .ICEauthority          Sreerenjini
+.bash_history  JoelJS2R               .sudo_as_admin_successful
+.bash_logout   libgraph-1.0.2         Templates
+.bashrc        libgraph-1.0.2.tar.gz  test
+.cache         .local                 Videos
+.compiz        minnu                  .Xauthority
+.config        .mozilla               .xinputrc
+Desktop        Music                  .xsession-errors
+Documents      .nano                  .xsession-errors.old
+.dosbox        newfolder
+Downloads      Pictures
+
+5.Change the directory
+hwlab5@hwlab5:~$ cd newfolder
+hwlab5@hwlab5:~/newfolder$ 
+
+6.Create a blank file
+hwlab5@hwlab5:~/newfolder$ touch file1
+hwlab5@hwlab5:~/newfolder$ ls
+file1
+
+
+
+7.Print the working directory
+hwlab5@hwlab5:~/newfolder$ pwd
+/home/hwlab5/newfolder
+
+8.Creating a file with data
+hwlab5@hwlab5:~/newfolder$ cat>file1
+Hai..
+This is my first program
+
+
+
+
+9.Print the contents in a file
+hwlab5@hwlab5:~/newfolder$ cat file1
+Hai..
+This is my first program
+
+10.Copy contents into a file
+hwlab5@hwlab5:~/newfolder$ cp file1 duplicate
+hwlab5@hwlab5:~/newfolder$ cat duplicate
+Hai..
+This is my first program
+
+hwlab5@hwlab5:~/newfolder$ ls
+duplicate  file1
+
+11.Rename a file
+hwlab5@hwlab5:~/newfolder$ mv duplicate file2
+hwlab5@hwlab5:~/newfolder$ ls
+file1  file2
+
+12.To get the manual page
+hwlab5@hwlab5:~/newfolder$ man pwd
+
+13.To obtain whether error is occured
+hwlab5@hwlab5:~$ rm file2 2>>errorfile
+hwlab5@hwlab5:~$ cat errorfile
+rm: cannot remove 'file2': No such file or directory
+
